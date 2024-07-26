@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta thhp-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ربح</title>
+    <script>
+        function showText() {
+            var textElement = document.getElementById("hiddenText");
+            textElement.style.display = "block";
+            setTimeout(function() {
+                textElement.style.display = "none";
+            }, 3000); // النص يظهر لمدة 3000 ملي ثانية (3 ثواني)
+        }
+    </script>
+    <style>
+
+*{
+    padding:0;
+    margin:0;
+    font-family:'poppins' ,sans-serif;
+}
+
+body{
+    background:rgba(150, 69, 69, 0.281);
+}
+        #hiddenText {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color:red;
+            padding: 10px;
+            border: 1px solid red;
+            border-radius:5px;
+            color:white;
+            z-index: 1000; /* للتأكد من أن النص يظهر فوق كل العناصر الأخرى */
+        }
+
+        .input{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30%;
+
+        }
+
+        .in-2{
+            margin-top: 20px;
+           
+        }
+        .in-2 input{
+            height: 35px;
+            width: 170px;
+            font-size:15px;
+            color:white;
+            background: rgb(0, 60, 255);
+            border-radius: 20px;
+            border-top:2px solid rgb(0, 60, 255);
+             border-right:2px solid rgb(0, 60, 255);
+             border-left:2px solid rgb(0, 60, 255);
+             border-bottom:2px solid rgb(0, 60, 255)e;
+            
+        }
+        .in-1 input{
+            height: 30px;
+            width: 200px;
+             padding-left: 10px;
+             border-top:1px solid blue;
+             border-right:1px solid blue;
+             border-left:1px solid blue;
+             border-bottom:1px solid blue;
+             border-radius:5px;
+        }
+
+    </style>
+</head>
+<body>
+    <from action="#hiddenText">
+   <div class="input">
+    <div class="in-1"><input  type="text" placeholder="يرجي ادخال رقم فودافون كاش" ></div>
+    <div class="in-2"><input  type="submit" onclick="showText()" value="اضغط للحصول علي الربح"></div>
+   </div>
+    <div id="hiddenText"> ...لقد انتهي عرض سحب 50جنيه حاول مره اخري بعد 48ساعه</div>
+</from>
+</body>
+</html>
